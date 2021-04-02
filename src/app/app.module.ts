@@ -1,16 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {MatCardModule} from '@angular/material/card';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {PostsModule} from './posts/posts.module';
 
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PostsModule,
+    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

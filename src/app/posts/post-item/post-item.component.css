@@ -1,0 +1,17 @@
+button {
+  background: transparent;
+  color: #8AC4FF;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+mat-card-content{
+  text-align: left;
+  background: white;
+  padding: 20px;
+}
+
+
