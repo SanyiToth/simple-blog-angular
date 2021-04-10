@@ -4,18 +4,26 @@ import {MatCardModule} from '@angular/material/card';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {PostsModule} from './posts/posts.module';
+import { PostDetailsComponent } from './post-details/post-details.component';
+import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from '@angular/router';
+import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    PostDetailsComponent,
+    NotFoundComponentComponent,
 
   ],
   imports: [
     BrowserModule,
     PostsModule,
-    MatCardModule
+    MatCardModule,
+    AppRoutingModule,
+    RouterModule
 
   ],
   providers: [],

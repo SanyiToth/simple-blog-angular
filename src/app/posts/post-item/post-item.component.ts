@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Post} from 'src/app/posts/post.interface';
 
 @Component({
   selector: 'app-post-item',
@@ -7,13 +8,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PostItemComponent implements OnInit {
 
-  @Input() data = {
-    postImg: '',
-    title: '',
-    body: ''
-  };
+  @Input() data: Post;
 
   constructor() {
+  }
+
+  logOtherPage(): void {
+
+
+
   }
 
   ngOnInit(): void {

@@ -10,6 +10,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {PostItemComponent} from 'src/app/posts/post-item/post-item.component';
 import {TrucatePipe} from 'src/app/trucate.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HttpErrorInterceptor} from './http-error.interceptor';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -29,6 +33,15 @@ import {TrucatePipe} from 'src/app/trucate.pipe';
     CommonModule,
     BrowserAnimationsModule,
     MatCardModule,
+    HttpClientModule,
+    RouterModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
   ]
 })
 export class PostsModule {

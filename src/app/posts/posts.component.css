@@ -13,12 +13,17 @@
   box-shadow: 5px 10px 8px #888888;
 }*/
 
-.message {
+.nopost {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: blue;
+}
+
+.error{
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: red;
 }
-
 
 
 
