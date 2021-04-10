@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {MatCardModule} from '@angular/material/card';
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
 import {PostsModule} from './posts/posts.module';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +12,6 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     PostDetailsComponent,
     NotFoundComponentComponent,
 

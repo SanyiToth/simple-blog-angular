@@ -4,7 +4,7 @@
     <mat-card-title><h2 [innerHTML]="data.title | ucfirst| trucate:20"></h2></mat-card-title>
     <p [innerHTML]="data.body | ucfirst | trucate"></p>
     <mat-card-actions>
-      <a routerLink="/posts">
+      <a routerLink="/posts/{{data.id}}">
         <button mat-button [innerHTML]="'read more'| uppercase"></button>
       </a>
     </mat-card-actions>

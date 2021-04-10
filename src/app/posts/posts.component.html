@@ -1,9 +1,9 @@
-
+<app-header></app-header>
 
 <div *ngIf="errorMessage==='';then success else error"></div>
 
 <ng-template #success>
-  <ng-template *ngIf="posts.length===0;then noPosts else withPosts">
+  <ng-template *ngIf="posts?.length===0;then noPosts else withPosts">
   </ng-template>
 </ng-template>
 <ng-template #error>

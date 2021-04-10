@@ -8,7 +8,7 @@ import {NotFoundComponentComponent} from './not-found-component/not-found-compon
 
 const routes: Routes = [
   {path: '', component: PostsComponent},
-  {path: 'posts', component: PostDetailsComponent},
+  {path: 'posts/:id', component: PostDetailsComponent},
   {path: '404', component: NotFoundComponentComponent},
   {path: '**', redirectTo: '404'}
 ];

@@ -14,10 +14,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpErrorInterceptor} from './http-error.interceptor';
 import {RouterModule} from '@angular/router';
-
+import {HeaderComponent} from 'src/app/header/header.component';
 
 @NgModule({
   declarations: [
+    HeaderComponent,
     PostsComponent,
     HighlightPipe,
     JoinPipe,
