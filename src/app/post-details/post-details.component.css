@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
 }
+h2{
+  padding: 20px;
+}
 
-p{
+p {
   font-family: 'Roboto', sans-serif;
 }
+img{
+  width: 50%;
+}
+
+mat-card {
+  margin: 10px;
+}
+
+.header-mat-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.body-mat-card {
+  display: flex;
+}
+
+

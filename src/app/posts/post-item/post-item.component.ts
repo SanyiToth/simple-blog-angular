@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Post} from 'src/app/posts/post.interface';
-import {ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-post-item',

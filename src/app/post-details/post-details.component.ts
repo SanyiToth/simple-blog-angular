@@ -4,6 +4,7 @@ import {Post} from '../posts/post.interface';
 import {PostsService} from 'src/app/posts/posts.service';
 import {switchMap} from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-post-details',
   templateUrl: './post-details.component.html',

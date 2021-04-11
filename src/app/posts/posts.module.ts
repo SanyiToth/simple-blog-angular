@@ -15,11 +15,13 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpErrorInterceptor} from './http-error.interceptor';
 import {RouterModule} from '@angular/router';
 import {HeaderComponent} from 'src/app/header/header.component';
+import {PostDetailsComponent} from 'src/app/post-details/post-details.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     PostsComponent,
+    PostDetailsComponent,
     HighlightPipe,
     JoinPipe,
     ReversePipe,
