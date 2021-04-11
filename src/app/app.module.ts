@@ -9,6 +9,8 @@ import {RouterModule} from '@angular/router';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageComponent } from './page/page.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     NotFoundComponentComponent,
     FooterComponent,
     AboutUsComponent,
+    ContactComponent,
+    PageComponent,
 
   ],
   imports: [
