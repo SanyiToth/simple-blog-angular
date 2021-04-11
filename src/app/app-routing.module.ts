@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {PostsComponent} from './posts/posts.component';
 import {PostDetailsComponent} from './post-details/post-details.component';
-import {HeaderComponent} from './header/header.component';
 import {NotFoundComponentComponent} from './not-found-component/not-found-component.component';
 
 const routes: Routes = [

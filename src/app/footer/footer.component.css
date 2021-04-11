@@ -1,0 +1,16 @@
+
+a {
+  text-decoration: none;
+}
+
+mat-selection-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+mat-list-option {
+  text-align: center;
+}
+

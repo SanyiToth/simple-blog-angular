@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let link of footerLinks" [value]="link">
+      <a [routerLink]="link.root"> {{link.title}}</a>
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card>
