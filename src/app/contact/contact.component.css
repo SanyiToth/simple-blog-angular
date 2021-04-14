@@ -1,0 +1,50 @@
+
+
+.header {
+  padding: 10px 50px;
+  height: 80px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+
+a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mat-card-form {
+  margin-bottom: 20px;
+  height: 60vh;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+  border-left: 5px solid red;
+  outline: 1px solid red;
+}
+input.ng-valid.ng-touched {
+  border: 1px solid lime;
+  border-left: 5px solid lime;
+}
+
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+  border-left: 5px solid red;
+  outline: 1px solid red;
+}
+textarea.ng-valid.ng-touched {
+  border: 1px solid lime;
+  border-left: 5px solid lime;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}
+

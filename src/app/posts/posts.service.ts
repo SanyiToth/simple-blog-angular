@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class PostsService {
-  static readonly API_URL = `http://localhost:3000/posts`;
+   static readonly API_URL = `http://localhost:3000/posts`;
 
   constructor(private http: HttpClient) {
   }

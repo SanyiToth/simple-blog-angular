@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageComponent } from './page/page.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PageComponent } from './page/page.component';
     MatCardModule,
     MatListModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
 
   ],
   providers: [],
