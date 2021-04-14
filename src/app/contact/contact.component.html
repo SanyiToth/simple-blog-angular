@@ -16,10 +16,10 @@
            minlength="6"
            [ngModel]="initialValues.name"
            placeholder="Fill your name please!">
-    <div class="error" *ngIf="nameField.invalid && !nameField.value && nameField.touched">
+    <div class="error" *ngIf="nameField.invalid && !nameField.value && contactForm.touched">
       Please fill your name!
     </div>
-    <div class="error" *ngIf="nameField.invalid && nameField.value.length <= 6  && nameField.touched">
+    <div class="error" *ngIf="nameField.invalid && nameField.value.length <= 6  && contactForm.touched">
       Name should be at least 6 characters!
     </div>
 
@@ -29,10 +29,10 @@
       <label for="emailField">Email:</label><br>
       <input type="text" name="emailField" id="emailField" [ngModel]="initialValues.email" email
              placeholder="Fill your email please!" required #emailField="ngModel">
-      <div class="error" *ngIf="emailField.invalid && !emailField.value && emailField.touched">
+      <div class="error" *ngIf="emailField.invalid && !emailField.value && contactForm.touched">
         Please fill your email!
       </div>
-      <div class="error" *ngIf="emailField.invalid && emailField.value && emailField.touched">
+      <div class="error" *ngIf="emailField.invalid && emailField.value && contactForm.touched">
         Please fill a valid email!
       </div>
     </div>
@@ -44,10 +44,10 @@
       <textarea id="textareaField" name="textareaField" [ngModel]="initialValues.textarea"
                 placeholder="You can write your message here" rows="4" cols="50" required
                 #textareaField="ngModel" minlength="100"></textarea>
-      <div class="error" *ngIf="textareaField.invalid && !textareaField.value && textareaField.touched">
+      <div class="error" *ngIf="textareaField.invalid && !textareaField.value && contactForm.touched">
         Please fill your message!
       </div>
-      <div class="error" *ngIf="textareaField.invalid && textareaField.value.length <= 99  && textareaField.touched">
+      <div class="error" *ngIf="textareaField.invalid && textareaField.value.length <= 99  && contactForm.touched">
         Message should be at least 100 characters!
       </div>
     </div>
