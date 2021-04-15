@@ -25,6 +25,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    console.log(form);
     this.contactFormMessage = {
       name: form.value.nameField,
       email: form.value.emailField,
