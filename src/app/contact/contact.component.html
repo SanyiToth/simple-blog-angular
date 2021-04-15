@@ -7,7 +7,7 @@
 <mat-card class="mat-card-form">
   <h2>We are keen to hear from You!</h2>
   <form #contactForm="ngForm" (submit)="onSubmit(contactForm)">
-    <label for="nameField">Name:</label><br>
+    <label for="nameField">Name</label><br>
     <input type="text" #nameField="ngModel"
            name="nameField"
            id="nameField"
@@ -26,13 +26,13 @@
 
     <div>
       <br>
-      <label for="emailField">Email:</label><br>
+      <label for="emailField">Email</label><br>
       <input type="text" name="emailField" id="emailField" [ngModel]="initialValues.email" email
              placeholder="Fill your email please!" required #emailField="ngModel">
-      <div class="error" *ngIf="emailField.invalid && !emailField.value && emailField.touched">
+      <div class="error" *ngIf=" nameField.valid && emailField.invalid && !emailField.value && emailField.touched">
         Please fill your email!
       </div>
-      <div class="error" *ngIf="emailField.invalid && emailField.value && emailField.touched">
+      <div class="error" *ngIf="nameField.valid && emailField.invalid && emailField.value">
         Please fill a valid email!
       </div>
     </div>
@@ -44,10 +44,13 @@
       <textarea id="textareaField" name="textareaField" [ngModel]="initialValues.message"
                 placeholder="You can write your message here" rows="4" cols="50" required
                 #textareaField="ngModel" minlength="100"></textarea>
-      <div class="error" *ngIf="textareaField.invalid && !textareaField.value.length && textareaField.touched">
+      <div class="error"
+           *ngIf=" nameField.valid && emailField.valid && textareaField.invalid && !textareaField.value.length
+            && textareaField.touched">
         Please fill your message!
       </div>
-      <div class="error" *ngIf="textareaField.invalid && textareaField.value.length">
+      <div class="error"
+           *ngIf="nameField.valid && emailField.valid && textareaField.invalid && textareaField.value.length">
         Message should be at least 100 characters!
       </div>
     </div>
@@ -58,7 +61,7 @@
       <input type="checkbox" name="acceptField" id="acceptField" [ngModel]="initialValues.acceptedTermsAndConditions"
              required #checkboxField="ngModel">
       <label for="acceptField">I read and accept the Terms & Conditions</label>
-      <div class="error" *ngIf="checkboxField.invalid && checkboxField.touched">
+      <div class="error" *ngIf="checkboxField.invalid && nameField.valid && emailField.valid && textareaField.valid">
         Please read and accept Terms & Conditions to send Us your message!
       </div>
 
