@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {ContactFormMessage} from './contact-form-message.interface';
 
 @Component({
   selector: 'app-contact',
@@ -7,11 +8,14 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  initialValues = {
+  initialValues: ContactFormMessage = {
     name: '',
     email: '',
-    textarea: ''
+    message: '',
+    acceptedTermsAndConditions: false
   };
+
+  contactFormMessage: ContactFormMessage;
 
   constructor() {
   }
@@ -21,7 +25,12 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
-    console.log('form', form);
-    console.log('form.value', form.value);
+    this.contactFormMessage = {
+      name: form.value.nameField,
+      email: form.value.emailField,
+      message: form.value.textareaField,
+      acceptedTermsAndConditions: form.value.acceptField
+    };
+    console.log('contactformmessage', this.contactFormMessage);
   }
 }

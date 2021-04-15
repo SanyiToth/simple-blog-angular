@@ -10,7 +10,12 @@ import {PageComponent} from 'src/app/page/page.component';
 
 const routes: Routes = [
   {path: '', component: PostsComponent},
-  {path: 'posts/:id', component: PostDetailsComponent},
+  /*  {path: 'posts/:id', component: PostDetailsComponent},*/
+  {
+    path: 'posts', children: [
+      {path: ':id', component: PostDetailsComponent}
+    ]
+  },
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'page', component: PageComponent},
