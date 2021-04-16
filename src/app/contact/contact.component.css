@@ -10,7 +10,7 @@ h1 {
   font-weight: bolder;
 }
 
-a {
+.header a {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -56,4 +56,11 @@ textarea.ng-valid.ng-touched {
 
 .error-alert {
   color: red;
+}
+
+.mat-card-form a {
+  text-decoration: none;
+  color:inherit;
+  font-weight: bolder;
+
 }

@@ -67,7 +67,7 @@
       <br>
       <input type="checkbox" name="acceptField" id="acceptField" [ngModel]="initialValues.acceptedTermsAndConditions"
              required #checkboxField="ngModel">
-      <label for="acceptField">I read and accept the Terms & Conditions</label>
+      <label for="acceptField">I read and accept the <a routerLink="/page">Terms & Conditions</a></label>
       <div class="error" *ngIf="checkboxField.invalid && checkboxField.touched">
         Please read and accept Terms & Conditions to send Us your message!
       </div>
