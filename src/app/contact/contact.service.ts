@@ -9,7 +9,7 @@ import {ContactFormMessage} from './contact-form-message.interface';
 })
 export class ContactService {
 
-  static readonly API_URL = `http://localhost:3000/contactFormMessagess`;
+  static readonly API_URL = `http://localhost:3000/contactFormMessages`;
 
   constructor(private http: HttpClient) {
   }
