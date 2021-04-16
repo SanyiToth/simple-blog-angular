@@ -9,9 +9,9 @@ import {RouterModule} from '@angular/router';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
 import { PageComponent } from './page/page.component';
-import {FormsModule} from '@angular/forms';
+import {ContactModule} from './contact/contact.module';
+
 
 
 @NgModule({
@@ -20,7 +20,6 @@ import {FormsModule} from '@angular/forms';
     NotFoundComponentComponent,
     FooterComponent,
     AboutUsComponent,
-    ContactComponent,
     PageComponent,
 
   ],
@@ -31,8 +30,7 @@ import {FormsModule} from '@angular/forms';
     MatListModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
-
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]
