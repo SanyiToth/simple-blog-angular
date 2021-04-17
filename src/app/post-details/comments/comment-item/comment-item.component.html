@@ -1,5 +1,10 @@
 <mat-card>
-  <p>Name: <br>{{commentMessage.name}}</p>
-  <p> Comment: <br>{{commentMessage.body}}</p>
-  <p>Email: <br>{{commentMessage.email}}</p>
+  <mat-card-content>
+    {{commentMessage.body}}
+  </mat-card-content>
+  <mat-card-subtitle>
+   {{commentMessage.name}} <br>
+   {{commentMessage.email}}
+  </mat-card-subtitle>
+
 </mat-card>

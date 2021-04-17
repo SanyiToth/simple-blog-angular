@@ -1,5 +1,7 @@
-<div *ngIf="comments.length then withCommentsTpl; else emptyCommentsTpl"></div>
+<h1>Comments</h1>
 
+
+<div *ngIf="comments?.length then withCommentsTpl; else emptyCommentsTpl"></div>
 
 <ng-template #emptyCommentsTpl>
   <mat-card>
@@ -14,7 +16,7 @@
 
 
 <ng-template #withCommentsTpl>
-  <div *ngFor="let comment of comments">
+  <div *ngFor="let comment of comments;">
     <app-comment [commentMessage]="comment"></app-comment>
   </div>
 </ng-template>

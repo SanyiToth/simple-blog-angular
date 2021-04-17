@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h1>{{post?.title | ucfirst}}</h1>
+      <h1>{{post?.title}}</h1>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="header-mat-card">
@@ -14,9 +14,11 @@
 <mat-card>
   <mat-card-content class="body-mat-card">
     <img [src]="post?.postImg" alt="picture">
-    <h2>{{post?.body | ucfirst}}</h2>
+    <h2>{{post?.body}}</h2>
   </mat-card-content>
 </mat-card>
 
-<app-comment-container [postId]="post?.id"></app-comment-container>
+<app-comment-container ></app-comment-container>
 
+<!--
+[postId]="post.id"-->

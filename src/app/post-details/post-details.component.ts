@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Post} from '../posts/post.interface';
 import {PostsService} from 'src/app/posts/posts.service';
-import {switchMap} from 'rxjs/operators';
+import {switchMap, tap} from 'rxjs/operators';
 
 
 @Component({
@@ -19,15 +19,30 @@ export class PostDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.id = params.id;
-      this.postsService.getPost(this.id)
-        .subscribe(post => {
-          this.post = post;
-        }, errorMsg => {
-          this.errorMessage = errorMsg;
-        });
-    });
+    this.route.params
+      .pipe(
+        tap(params => {
+            this.id = params.id;
+          }
+        ),
+        switchMap(() => this.postsService.getPost(this.id)))
+      .subscribe(response => {
+        this.post = response;
+      }, error => {
+        console.log('error', error);
+        this.errorMessage = error;
+      });
+
+
+    /* this.route.params.subscribe(params => {
+       this.id = params.id;
+       this.postsService.getPost(this.id)
+         .subscribe(post => {
+           this.post = post;
+         }, errorMsg => {
+           this.errorMessage = errorMsg;
+         });
+     });*/
 
   }
 

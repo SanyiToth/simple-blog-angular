@@ -1,3 +1,10 @@
-mat-card {
-  margin: 10px 0;
+h1 {
+  border-bottom: 3px solid red;
+  color: red;
 }
+
+mat-card {
+  width: 700px;
+  margin: 10px auto;
+}
+
