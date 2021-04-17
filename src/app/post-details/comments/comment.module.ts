@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CommentComponent } from './comment.component';
+import { CommentItemComponent } from './comment-item/comment-item.component';
+import { CommentContainerComponent } from './comment-container.component';
 
 
 
 @NgModule({
-  declarations: [CommentComponent],
+  declarations: [CommentItemComponent, CommentContainerComponent],
   imports: [
     CommonModule
   ]
