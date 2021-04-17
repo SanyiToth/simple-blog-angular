@@ -1,3 +1,6 @@
-// tslint:disable-next-line:no-empty-interface
 export interface Comment {
+  'postId': number;
+  'name': string;
+  'email': string;
+  'body': string;
 }
