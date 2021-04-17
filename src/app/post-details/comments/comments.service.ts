@@ -8,7 +8,7 @@ import {Comment} from './comment.interface';
   providedIn: 'root'
 })
 export class CommentsService {
-  static readonly API_URL = `http://localhost:3000/comments`;
+  static readonly API_URL = `http://localhost:3000/comments?postId=`;
 
 
   constructor(private http: HttpClient) {
@@ -16,6 +16,6 @@ export class CommentsService {
 
 
   getComments(postId: number): Observable<Comment[ ]> {
-    return this.http.get<Comment[]>(CommentsService.API_URL + '/' + postId);
+    return this.http.get<Comment[]>(CommentsService.API_URL + postId);
   }
 }
