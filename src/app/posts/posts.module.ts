@@ -17,6 +17,7 @@ import {RouterModule} from '@angular/router';
 import {HeaderComponent} from 'src/app/header/header.component';
 import {PostDetailsComponent} from 'src/app/post-details/post-details.component';
 import { PostRoutingModule } from './post-routing.module';
+import { CommentModule } from '../post-details/comments/comment.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PostRoutingModule } from './post-routing.module';
     MatCardModule,
     HttpClientModule,
     RouterModule,
-    PostRoutingModule
+    PostRoutingModule,
+    CommentModule
   ],
   providers: [
     {
