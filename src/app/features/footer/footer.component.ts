@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class FooterComponent implements OnInit {
   footerLinks = [
     {title: 'Blog', root: ''},
-    {title: 'Terms & Conditions', root: '/page'},
+    {title: 'Terms & Conditions', root: '/terms-and-conditions'},
     {title: 'About Us', root: '/about-us'},
     {title: 'Contact', root: '/contact'}
   ];

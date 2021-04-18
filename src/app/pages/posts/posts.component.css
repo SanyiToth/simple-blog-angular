@@ -1,0 +1,32 @@
+
+.header{
+  background: white;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto auto;
+  padding: 20px 0;
+}
+
+.nopost {
+  font-weight: bold;
+  color: blue;
+}
+
+.error{
+  font-weight: bold;
+  color: red;
+}
+
+
+
+
+

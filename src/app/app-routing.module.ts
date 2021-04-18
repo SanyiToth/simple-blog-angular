@@ -1,16 +1,15 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {PostsComponent} from './posts/posts.component';
-import {PostDetailsComponent} from './post-details/post-details.component';
-import {NotFoundComponentComponent} from './not-found-component/not-found-component.component';
-import {AboutUsComponent} from 'src/app/about-us/about-us.component';
-import {ContactComponent} from 'src/app/contact/contact.component';
-import {PageComponent} from 'src/app/page/page.component';
+import {PageComponent} from 'src/app/pages/terms-and-conditions/page.component';
+import {AboutUsComponent} from './pages/about-us/about-us.component';
+import {NotFoundComponentComponent} from './pages/not-found-component/not-found-component.component';
+import {PostsComponent} from './pages/posts/posts.component';
+import {PostDetailsComponent} from './features/post-details/post-details.component';
+import {ContactComponent} from './pages/contact/contact.component';
 
 const routes: Routes = [
   {path: '', component: PostsComponent},
-  /*  {path: 'posts/:id', component: PostDetailsComponent},*/
   {
     path: 'posts', children: [
       {path: ':id', component: PostDetailsComponent}
@@ -18,7 +17,7 @@ const routes: Routes = [
   },
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'page', component: PageComponent},
+  {path: 'terms-and-conditions', component: PageComponent},
   {path: '404', component: NotFoundComponentComponent},
   {path: '**', redirectTo: '404'}
 ];

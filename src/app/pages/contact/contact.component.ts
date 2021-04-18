@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, NgForm} from '@angular/forms';
-import {ContactFormMessage} from './contact-form-message.interface';
-import {ContactService} from './contact.service';
+import {ContactFormMessage} from '../../core/interfaces/contact-form-message.interface';
+import {ContactService} from '../../core/services/contact.service';
 
 @Component({
   selector: 'app-contact',
