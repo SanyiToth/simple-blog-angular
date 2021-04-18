@@ -8,7 +8,7 @@ import {Comment} from '../comment.interface';
   styleUrls: ['./comment-item.component.css']
 })
 export class CommentItemComponent implements OnInit {
-  @Input() commentMessage: Comment;
+  @Input() comment: Comment;
 
   constructor() {
   }

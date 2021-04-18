@@ -15,26 +15,12 @@ export class PostsComponent implements OnInit {
   constructor(private postsService: PostsService) {
   }
 
- /* checkPost(): string {
-    if (this.errorMessage !== '') {
-      console.log('checkPost() return error');
-      return 'error';
-    } else if (this.posts.length > 0) {
-      console.log('checkPost() return withPosts');
-      return 'withPosts';
-    } else if (this.posts.length === 0) {
-      console.log('checkPost() return noPost');
-      return 'noPost';
-    }
-  }*/
-
   ngOnInit(): void {
     this.postsService.getPosts().subscribe(posts => {
       this.posts = posts;
     }, errorMsg => {
       this.errorMessage = errorMsg;
     });
-
 
   }
 }

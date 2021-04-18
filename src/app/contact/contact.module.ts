@@ -4,8 +4,7 @@ import {ContactComponent} from './contact.component';
 import {FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {AppRoutingModule} from '../app-routing.module';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {HttpErrorInterceptor} from '../posts/http-error.interceptor';
+
 
 
 @NgModule({
@@ -17,13 +16,6 @@ import {HttpErrorInterceptor} from '../posts/http-error.interceptor';
     CommonModule,
     MatCardModule,
     AppRoutingModule
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpErrorInterceptor,
-      multi: true
-    }
   ]
 })
 export class ContactModule {

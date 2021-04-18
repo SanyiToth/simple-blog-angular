@@ -8,13 +8,13 @@ import {Comment} from './comment.interface';
   providedIn: 'root'
 })
 export class CommentsService {
-  static readonly API_URL = `http://localhost:3000/comments?_sort=id&_order=desc&postId=`;
+  static readonly API_URL = `http://localhost:3000/comments`;
 
 
   constructor(private http: HttpClient) {
   }
 
-  getComments(postId: number): Observable<Comment[ ]> {
-    return this.http.get<Comment[]>(CommentsService.API_URL + postId);
+  getComments(postId: number | undefined): Observable<Comment[ ]> {
+    return this.http.get<Comment[]>(CommentsService.API_URL + '?_sort=id&_order=desc&postId=' + postId);
   }
 }
