@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Post} from 'src/app/core/interfaces/post.interface';
+import {Post} from 'src/app/features/posts/post.interface';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {ContactFormMessage} from '../interfaces/contact-form-message.interface';
+import {ContactFormMessage} from './contact-form-message.interface';
 
 
 @Injectable({
