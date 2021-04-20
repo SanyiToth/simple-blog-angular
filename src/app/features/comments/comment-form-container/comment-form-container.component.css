@@ -1,0 +1,9 @@
+h2 {
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+h2 span {
+  font-weight: bolder;
+
+}

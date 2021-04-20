@@ -1,0 +1,12 @@
+mat-card {
+  margin: 10px 0;
+}
+
+.first-line{
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea{
+  width: 100%;
+}

@@ -1,1 +1,31 @@
-<p>comment-form works!</p>
+<mat-card>
+  <form>
+    <div class="first-line">
+      <div>
+        <label for="firstname">First name</label><br>
+        <input type="text" id="firstname" name="firstname">
+      </div>
+      <div>
+        <label for="lastname">Last name</label><br>
+        <input type="text" id="lastname" name="lastname">
+      </div>
+      <div>
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email">
+      </div>
+    </div>
+    <br>
+    <div>
+      <label for="comment">Comment</label><br>
+      <textarea name="comment" id="comment"  rows="10"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="checkbox" id="terms" name="terms">
+      <label for="terms">I accept the <a routerLink="/page">Terms & Conditions</a></label>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+
+  </form>
+</mat-card>
