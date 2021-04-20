@@ -1,6 +1,7 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
-import {Comment} from 'src/app/features/comments/comment.interface';
+import {NewComment} from '../new-comment.interface';
+
 
 @Component({
   selector: 'app-comment-form',
@@ -9,8 +10,8 @@ import {Comment} from 'src/app/features/comments/comment.interface';
 })
 export class CommentFormComponent implements OnInit {
 
-  @Input() postId;
-  @Output() comment;
+  @Output() commentToParent = new EventEmitter<NewComment>();
+
 
   myForm: FormGroup = new FormGroup({
     firstName: new FormControl(null,
@@ -32,8 +33,11 @@ export class CommentFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.myForm.value);
+    console.log('this.myForm.value', this.myForm.value);
+    this.commentToParent.emit(this.myForm.value);
+    this.myForm.reset();
   }
+
 
   get firstName(): AbstractControl | null {
     return this.myForm.get('firstName');
