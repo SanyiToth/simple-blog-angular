@@ -43,13 +43,6 @@ export class ContactComponent implements OnInit {
       message: form.value.textareaField,
       acceptedTermsAndConditions: form.value.acceptField
     };
-    /* console.log('contactformmessage', this.contactFormMessage);*/
-
-    /*  this.contactService.getMessage().subscribe(response => {
-        console.log('getMessage()', response);
-      }, errorMsg => {
-        console.log('error', errorMsg);
-      });*/
 
     this.contactService.sendMessage(this.contactFormMessage).subscribe(response => {
       console.log('sendMessage()', response);

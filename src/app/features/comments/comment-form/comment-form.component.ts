@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Comment} from 'src/app/features/comments/comment.interface';
 
 @Component({
@@ -35,4 +35,23 @@ export class CommentFormComponent implements OnInit {
     console.log(this.myForm.value);
   }
 
+  get firstName(): AbstractControl | null {
+    return this.myForm.get('firstName');
+  }
+
+  get lastName(): AbstractControl | null {
+    return this.myForm.get('lastName');
+  }
+
+  get email(): AbstractControl | null {
+    return this.myForm.get('email');
+  }
+
+  get message(): AbstractControl | null {
+    return this.myForm.get('comment');
+  }
+
+  get terms(): AbstractControl | null {
+    return this.myForm.get('acceptedTermsAndConditions');
+  }
 }
