@@ -1,31 +1,31 @@
 <mat-card>
-  <form>
+  <form #commentForm="ngForm" (submit)="onSubmit()" [formGroup]="myForm">
     <div class="first-line">
       <div>
         <label for="firstname">First name</label><br>
-        <input type="text" id="firstname" name="firstname">
+        <input type="text" id="firstname" name="firstname" formControlName="firstName">
       </div>
       <div>
         <label for="lastname">Last name</label><br>
-        <input type="text" id="lastname" name="lastname">
+        <input type="text" id="lastname" name="lastname" formControlName="lastName">
       </div>
       <div>
         <label for="email">E-mail</label><br>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" formControlName="email">
       </div>
     </div>
     <br>
     <div>
       <label for="comment">Comment</label><br>
-      <textarea name="comment" id="comment"  rows="10"></textarea>
+      <textarea name="comment" id="comment" rows="10" formControlName="comment"></textarea>
     </div>
     <br>
     <div>
-      <input type="checkbox" id="terms" name="terms">
+      <input type="checkbox" id="terms" name="terms" formControlName="acceptedTermsAndConditions">
       <label for="terms">I accept the <a routerLink="/page">Terms & Conditions</a></label>
     </div>
     <br>
-    <button type="submit">Submit</button>
+    <button type="submit"  [disabled]="commentForm.invalid" >Submit</button>
 
   </form>
 </mat-card>

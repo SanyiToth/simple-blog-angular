@@ -6,12 +6,15 @@ import {CommentFormContainerComponent} from './comment-form-container/comment-fo
 import {CommentFormComponent} from './comment-form/comment-form.component';
 import {CommentContainerComponent} from './comments-container/comment-container.component';
 import {RouterModule} from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [CommentItemComponent, CommentFormContainerComponent, CommentFormComponent, CommentContainerComponent],
   imports: [
     CommonModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommentContainerComponent,
