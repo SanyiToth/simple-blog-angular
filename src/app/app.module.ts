@@ -3,17 +3,16 @@ import {BrowserModule} from '@angular/platform-browser';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {AppComponent} from './app.component';
-import {PostsModule} from './pages/posts/posts.module';
-import {AppRoutingModule} from './app-routing.module';
+import {PostsModule} from './features/posts/posts.module';
 import {RouterModule} from '@angular/router';
-import {NotFoundComponentComponent} from './pages/not-found-component/not-found-component.component';
-import {FooterComponent} from './features/footer/footer.component';
-import {AboutUsComponent} from './pages/about-us/about-us.component';
-import {PageComponent} from './pages/terms-and-conditions/page.component';
-import {ContactModule} from './pages/contact/contact.module';
-import {CommentModule} from './features/comments/comment.module';
+import {NotFoundComponentComponent} from './core/components/not-found-component/not-found-component.component';
+import {FooterComponent} from './core/components/footer/footer.component';
+import {PageComponent} from './core/components/page/page.component';
+import {ContactModule} from './features/contact/contact.module';
+import {CommentsModule} from './features/comments/comments.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.interceptor';
+import {AppRoutingModule} from './app-routing.module';
 
 
 @NgModule({
@@ -21,7 +20,6 @@ import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.in
     AppComponent,
     NotFoundComponentComponent,
     FooterComponent,
-    AboutUsComponent,
     PageComponent,
 
   ],
@@ -33,7 +31,7 @@ import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.in
     AppRoutingModule,
     RouterModule,
     ContactModule,
-    CommentModule
+    CommentsModule
   ],
 
   providers: [

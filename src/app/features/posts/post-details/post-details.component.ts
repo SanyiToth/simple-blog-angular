@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 import {switchMap, tap} from 'rxjs/operators';
-import {PostsService} from '../posts/posts.service';
-import {Post} from '../posts/post.interface';
+import {PostsService} from '../posts.service';
+import {Post} from '../post.interface';
 
 
 @Component({

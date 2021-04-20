@@ -8,9 +8,8 @@ import {PostItemComponent} from 'src/app/features/posts/post-item/post-item.comp
 import {TrucatePipe} from 'src/app/core/pipes/trucate.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-import {PostDetailsComponent} from 'src/app/features/post-details/post-details.component';
+import {PostDetailsComponent} from 'src/app/features/posts/post-details/post-details.component';
 import {PostRoutingModule} from './post-routing.module';
-import {CommentContainerComponent} from '../comments/comments-container/comment-container.component';
 import {CommentsModule} from '../comments/comments.module';
 
 
@@ -19,7 +18,6 @@ import {CommentsModule} from '../comments/comments.module';
     PostsComponent,
     PostDetailsComponent,
     PostItemComponent,
-    CommentContainerComponent,
     UcfirstPipe,
     TrucatePipe,
   ],
