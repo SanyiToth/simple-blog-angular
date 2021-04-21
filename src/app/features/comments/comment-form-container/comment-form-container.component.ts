@@ -3,6 +3,7 @@ import {NewComment} from '../new-comment.interface';
 import {CommentsService} from '../comments.service';
 import {CommentContainerComponent} from '../comments-container/comment-container.component';
 
+
 @Component({
   selector: 'app-comment-form-container',
   templateUrl: './comment-form-container.component.html',
@@ -19,13 +20,7 @@ export class CommentFormContainerComponent implements OnInit {
   }
 
   setComment(newComment: NewComment): void {
-    this.comment = {
-      name: newComment.name,
-      email: newComment.email,
-      body: newComment.body,
-      postId: this.postId,
-      acceptedTermsAndConditions: newComment.acceptedTermsAndConditions
-    };
+    this.comment = newComment;
     this.comment.postId = this.postId;
     console.log('this.comment', this.comment);
     this.commentService.postComments(this.comment)

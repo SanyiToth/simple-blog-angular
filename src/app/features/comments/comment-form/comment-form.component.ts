@@ -11,6 +11,7 @@ import {NewComment} from '../new-comment.interface';
 export class CommentFormComponent implements OnInit {
 
   @Output() commentToParent = new EventEmitter<NewComment>();
+  newComment: NewComment;
 
   myForm: FormGroup = new FormGroup({
     name: new FormGroup({
@@ -34,8 +35,15 @@ export class CommentFormComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.newComment = {
+      name: `${this.myForm.value.name.firstName} ${this.myForm.value.name.lastName}`,
+      email: this.myForm.value.email,
+      body: this.myForm.value.body,
+      postId: undefined,
+      acceptedTermsAndConditions: this.myForm.value.acceptedTermsAndConditions
+    };
     console.log('this.myForm.value', this.myForm.value);
-    this.commentToParent.emit(this.myForm.value);
+    this.commentToParent.emit(this.newComment);
     this.myForm.reset();
   }
 

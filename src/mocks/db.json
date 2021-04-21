@@ -3548,24 +3548,18 @@
       "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     },
     {
-      "name": {
-        "firstName": "Sandor",
-        "lastName": "Toth"
-      },
+      "name": "Sandor Toth",
       "email": "sandor.toth@hotmail.com",
-      "body": "maiores sed dolores similique labore et inventore et quasi temporibus esse sunt id et eos voluptatem aliquam aliquid ratione corporis molestiae mollitia quia et magnam dolor",
-      "postId": 2,
+      "body": "incidunt sapiente eaque dolor eos ad est molestias quas sit et nihil exercitationem at cumque ullam nihil magnam et",
+      "postId": "6",
       "acceptedTermsAndConditions": true,
       "id": 501
     },
     {
-      "name": {
-        "firstName": "Sandor",
-        "lastName": "Toth"
-      },
+      "name": "Sandor Toth",
       "email": "sandor.toth@hotmail.com",
-      "body": "doloribus at sed quis culpa deserunt consectetur qui praesentium accusamus fugiat dicta voluptatem rerum ut voluptate autem voluptatem repellendus aspernatur dolorem in",
-      "postId": 2,
+      "body": "ut dolorum nostrum id quia aut est fuga est inventore vel eligendi explicabo quis consectetur aut occaecati repellat id natus quo est ut blanditiis quia ut vel ut maiores ea",
+      "postId": "3",
       "acceptedTermsAndConditions": true,
       "id": 502
     }

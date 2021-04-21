@@ -19,6 +19,11 @@ export class PostDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private postsService: PostsService) {
   }
 
+
+  onSubmit(): void {
+    console.log('submit');
+  }
+
   ngOnInit(): void {
     this.route.params
       .pipe(
