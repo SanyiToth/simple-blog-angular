@@ -12,15 +12,16 @@ export class CommentFormComponent implements OnInit {
 
   @Output() commentToParent = new EventEmitter<NewComment>();
 
-
   myForm: FormGroup = new FormGroup({
-    firstName: new FormControl(null,
-      [Validators.required, Validators.minLength(3)]),
-    lastName: new FormControl(null,
-      [Validators.required, Validators.minLength(3)]),
+    name: new FormGroup({
+      firstName: new FormControl(null,
+        [Validators.required, Validators.minLength(3)]),
+      lastName: new FormControl(null,
+        [Validators.required, Validators.minLength(3)])
+    }),
     email: new FormControl(null,
       [Validators.required, Validators.email]),
-    comment: new FormControl(null,
+    body: new FormControl(null,
       [Validators.required, Validators.minLength(100)]),
     acceptedTermsAndConditions: new FormControl(false,
       Validators.requiredTrue)
@@ -52,7 +53,7 @@ export class CommentFormComponent implements OnInit {
   }
 
   get message(): AbstractControl | null {
-    return this.myForm.get('comment');
+    return this.myForm.get('body');
   }
 
   get terms(): AbstractControl | null {

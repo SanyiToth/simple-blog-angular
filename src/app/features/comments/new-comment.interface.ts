@@ -1,7 +1,7 @@
 export interface NewComment {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
-  comment: string;
+  body: string;
   acceptedTermsAndConditions: boolean;
+  postId: number | undefined;
 }

@@ -1,2 +1,13 @@
 <h2><span>Add comment</span> - share your thoughts!</h2>
-<app-comment-form (commentToParent)="setComment($event)"></app-comment-form>
+<div class="success-alert" *ngIf="successAlert">
+  <h1>
+    Your comment added successfully!
+  </h1>
+</div>
+<div class="error-alert" *ngIf="errorMessage!==''">
+  <h1>
+    {{errorMessage}}
+  </h1>
+</div>
+<app-comment-form (commentToParent)="setComment($event)">
+</app-comment-form>
