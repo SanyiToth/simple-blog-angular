@@ -1,0 +1,20 @@
+<h2>Comments</h2>
+
+<div *ngIf="comments?.length then withCommentsTpl; else emptyCommentsTpl"></div>
+
+<ng-template #emptyCommentsTpl>
+  <mat-card>
+    <mat-card-title>
+      Any thoughts?
+    </mat-card-title>
+    <mat-card-subtitle>
+      Be the first and drop your ideas in the topic!
+    </mat-card-subtitle>
+  </mat-card>
+</ng-template>
+
+<ng-template #withCommentsTpl>
+  <div *ngFor="let comment of comments;">
+    <app-comment [comment]="comment"></app-comment>
+  </div>
+</ng-template>
