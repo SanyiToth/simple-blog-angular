@@ -14,12 +14,10 @@ export class CommentFormComponent implements OnInit {
   newComment: NewComment;
 
   myForm: FormGroup = new FormGroup({
-    name: new FormGroup({
-      firstName: new FormControl(null,
-        [Validators.required, Validators.minLength(3)]),
-      lastName: new FormControl(null,
-        [Validators.required, Validators.minLength(3)])
-    }),
+    firstName: new FormControl(null,
+      [Validators.required, Validators.minLength(3)]),
+    lastName: new FormControl(null,
+      [Validators.required, Validators.minLength(3)]),
     email: new FormControl(null,
       [Validators.required, Validators.email]),
     body: new FormControl(null,
@@ -36,7 +34,7 @@ export class CommentFormComponent implements OnInit {
 
   onSubmit(): void {
     this.newComment = {
-      name: `${this.myForm.value.name.firstName} ${this.myForm.value.name.lastName}`,
+      name: `${this.myForm.value.firstName} ${this.myForm.value.lastName}`,
       email: this.myForm.value.email,
       body: this.myForm.value.body,
       postId: undefined,
