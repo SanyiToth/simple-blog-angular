@@ -56,9 +56,10 @@
     </div>
     <br>
     <div>
-      <input type="checkbox" id="terms" name="terms" formControlName="acceptedTermsAndConditions">
-      <label for="terms">I accept the <a routerLink="/page">Terms & Conditions</a></label>
-
+      <div class="checkbox-container">
+        <input class="checkbox" type="checkbox" id="terms" name="terms" formControlName="acceptedTermsAndConditions">
+        <label for="terms">&nbsp;I accept the <a routerLink="/page">Terms & Conditions</a></label>
+      </div>
       <div class="error" *ngIf="terms?.invalid && terms?.touched">
         Please read and accept Terms & Conditions to send Us your message!
       </div>

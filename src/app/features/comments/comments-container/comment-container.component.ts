@@ -18,9 +18,6 @@ export class CommentContainerComponent implements OnInit {
   constructor(private commentService: CommentsService) {
   }
 
-
-
-
   ngOnInit(): void {
     this.commentService.getComments(this.postId)
       .subscribe(response => {

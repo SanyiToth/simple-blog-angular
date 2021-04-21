@@ -2,20 +2,22 @@ mat-card {
   margin: 10px 0;
 }
 
-.first-line{
+.first-line {
   display: flex;
   justify-content: space-between;
 }
 
-textarea{
+textarea {
   width: 100%;
 }
+
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
   border-left: 5px solid red;
   outline: 1px solid red;
 }
+
 
 input.ng-valid.ng-touched {
   border: 1px solid lime;
@@ -32,7 +34,14 @@ textarea.ng-valid.ng-touched {
   border: 1px solid lime;
   border-left: 5px solid lime;
 }
+
 .error {
   color: red;
   font-size: 10px;
 }
+
+.checkbox-container label {
+  margin: 0;
+}
+
+

@@ -14,6 +14,7 @@ export class CommentFormContainerComponent implements OnInit {
   comment: NewComment;
   errorMessage = '';
   successAlert = false;
+  errorAlert = false;
 
 
   constructor(private commentService: CommentsService) {
@@ -30,7 +31,16 @@ export class CommentFormContainerComponent implements OnInit {
       }, error => {
         console.log('error', error);
         this.errorMessage = error;
+        this.errorAlert = true;
       });
+  }
+
+  closeSuccessAlert(): void {
+    this.successAlert = false;
+  }
+
+  closeErrorAlert(): void {
+    this.errorAlert = false;
   }
 
 
