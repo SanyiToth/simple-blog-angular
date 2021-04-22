@@ -4,16 +4,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {NotFoundComponentComponent} from './core/components/not-found-component/not-found-component.component';
 import {PageComponent} from './core/components/page/page.component';
 import {PostsComponent} from './features/posts/posts.component';
-import {PostDetailsComponent} from './features/posts/post-details/post-details.component';
 import {ContactComponent} from './features/contact/contact.component';
 
 const routes: Routes = [
   {path: '', component: PostsComponent},
-  {
-    path: 'posts', children: [
-      {path: ':id', component: PostDetailsComponent}
-    ]
-  },
   {path: 'contact', component: ContactComponent},
   {path: 'page', component: PageComponent},
   {path: '404', component: NotFoundComponentComponent},
