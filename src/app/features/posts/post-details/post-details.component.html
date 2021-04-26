@@ -1,0 +1,34 @@
+<div *ngIf="errorMessage then errorTpl;else noErrorTpl"></div>
+
+<ng-template #errorTpl>
+  <mat-card class="error">
+    <h1>
+      {{errorMessage}}
+    </h1>
+  </mat-card>
+</ng-template>
+
+<ng-template #noErrorTpl>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>{{post?.title}}</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="header-mat-card">
+      <p>Id:{{post?.id}}</p>
+      <p>Author:{{post?.author}}</p>
+      <a routerLink=""><-- All posts</a>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content class="body-mat-card">
+      <img [src]="post?.postImg" alt="picture">
+      <h2>{{post?.body}}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <app-comment-container  [postId]="id"></app-comment-container>
+  <app-comment-form-container [postId]="id"></app-comment-form-container>
+</ng-template>

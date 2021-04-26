@@ -1,0 +1,70 @@
+<mat-card>
+  <form #commentForm="ngForm" (submit)="onSubmit()" [formGroup]="myForm">
+    <div class="first-line">
+      <div>
+        <label for="firstname">First name</label><br>
+        <input type="text" id="firstname" name="firstname" formControlName="firstName" placeholder="Your name here">
+        <div class="error-containers" *ngIf="firstName?.invalid && firstName?.touched">
+          <p class="error" *ngIf="firstName?.errors?.required">
+            Please fill your first name!
+          </p>
+          <p class="error" *ngIf="firstName?.errors?.minlength">
+            First name should be at least 3 characters!
+          </p>
+        </div>
+      </div>
+      <div>
+        <label for="lastname">Last name</label><br>
+        <input type="text" id="lastname" name="lastname" formControlName="lastName" placeholder="Your last name">
+        <div class="error-containers" *ngIf="lastName?.invalid && lastName?.touched">
+          <p class="error" *ngIf="lastName?.errors?.required">
+            Please fill your last name!
+          </p>
+          <p class="error" *ngIf="lastName?.errors?.minlength">
+            Last name should be at least 3 characters!
+          </p>
+        </div>
+      </div>
+      <div>
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email" formControlName="email" placeholder="your@email.com">
+        <div class="error-containers" *ngIf="email?.invalid && email?.touched">
+
+          <p class="error" *ngIf="email?.errors?.required">
+            Please fill your email address!
+          </p>
+
+          <p class="error" *ngIf="email?.errors?.email">
+            Please fill a valid email address!
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+      <label for="comment">Comment</label><br>
+      <textarea name="comment" id="comment" rows="10" formControlName="body"
+                placeholder="...your message goes here."></textarea>
+      <div class="error-containers" *ngIf="message?.invalid && message?.touched">
+        <p class="error" *ngIf="message?.errors?.required">
+          Please fill your comment!
+        </p>
+        <p class="error" *ngIf="message?.errors?.minlength">
+          Comment should be at least 100 characters!
+        </p>
+      </div>
+    </div>
+    <br>
+    <div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms" name="terms" formControlName="acceptedTermsAndConditions">
+        <label for="terms">&nbsp;I accept the <a routerLink="/page">Terms & Conditions</a></label>
+      </div>
+      <div class="error" *ngIf="terms?.invalid && terms?.touched">
+        Please read and accept Terms & Conditions to send Us your message!
+      </div>
+    </div>
+    <br>
+    <button type="submit" [disabled]="commentForm.invalid">Submit</button>
+  </form>
+</mat-card>

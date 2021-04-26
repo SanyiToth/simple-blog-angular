@@ -1,0 +1,17 @@
+h2 {
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+h2 span {
+  font-weight: bolder;
+
+}
+
+.success-alert {
+  color: green;
+}
+
+.error-alert {
+  color: red;
+}

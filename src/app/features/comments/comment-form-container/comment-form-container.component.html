@@ -1,0 +1,19 @@
+<h2><span>Add comment</span> - share your thoughts!</h2>
+
+<div *ngIf="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> Your comment added successfully!
+  <button (click)="closeSuccessAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+<div *ngIf="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>{{errorMessage}}</strong>
+  <button (click)="closeErrorAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<app-comment-form (commentToParent)="setComment($event)">
+</app-comment-form>
