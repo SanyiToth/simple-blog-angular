@@ -11,10 +11,12 @@ import {RouterModule} from '@angular/router';
 import {PostDetailsComponent} from 'src/app/features/posts/post-details/post-details.component';
 import {PostRoutingModule} from './post-routing.module';
 import {CommentsModule} from '../comments/comments.module';
+import {HeaderComponent} from '../../core/components/header/header.component';
 
 
 @NgModule({
   declarations: [
+    HeaderComponent,
     PostsComponent,
     PostDetailsComponent,
     PostItemComponent,
@@ -22,7 +24,8 @@ import {CommentsModule} from '../comments/comments.module';
     TrucatePipe,
   ],
   exports: [
-    PostsComponent
+    PostsComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

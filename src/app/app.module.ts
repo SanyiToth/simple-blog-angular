@@ -7,12 +7,13 @@ import {PostsModule} from './features/posts/posts.module';
 import {RouterModule} from '@angular/router';
 import {NotFoundComponentComponent} from './core/components/not-found-component/not-found-component.component';
 import {FooterComponent} from './core/components/footer/footer.component';
-import {PageComponent} from './core/components/page/page.component';
 import {ContactModule} from './features/contact/contact.module';
-import {CommentsModule} from './features/comments/comments.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.interceptor';
 import {AppRoutingModule} from './app-routing.module';
+import {PageComponent} from './core/components/page/page.component';
+import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.interceptor';
+import {CommentsModule} from './features/comments/comments.module';
+
 
 
 @NgModule({
