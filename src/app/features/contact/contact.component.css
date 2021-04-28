@@ -51,16 +51,29 @@ textarea.ng-valid.ng-touched {
 }
 
 .success-alert {
-  color: green;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.error-alert {
-  color: red;
+.success-alert mat-card {
+  color: green;
+  background: lightgreen;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.success-alert h1 {
+  font-size:xx-large;
+}
+
 
 .mat-card-form a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
   font-weight: bolder;
 
 }

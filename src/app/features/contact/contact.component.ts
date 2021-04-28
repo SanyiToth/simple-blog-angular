@@ -55,4 +55,12 @@ export class ContactComponent implements OnInit {
     });
 
   }
+
+  closeErrorAlert(): void {
+    this.errorAlert = false;
+  }
+
+  closeSuccessAlert():void {
+    this.successAlert = false;
+  }
 }
