@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewComment} from '../new-comment.interface';
 import {CommentsService} from '../comments.service';
 import {CommentContainerComponent} from '../comments-container/comment-container.component';
@@ -11,6 +11,7 @@ import {CommentContainerComponent} from '../comments-container/comment-container
 })
 export class CommentFormContainerComponent implements OnInit {
   @Input() postId: number;
+  @Output() response = new EventEmitter<NewComment>();
   comment: NewComment;
   errorMessage = '';
   successAlert = false;
@@ -24,9 +25,10 @@ export class CommentFormContainerComponent implements OnInit {
     this.comment = newComment;
     this.comment.postId = this.postId;
     console.log('this.comment', this.comment);
-    this.commentService.postComments(this.comment)
+    this.commentService.postComment(this.comment)
       .subscribe(response => {
         console.log('postComments()', response);
+        this.response.emit(response);
         this.successAlert = true;
       }, error => {
         console.log('error', error);

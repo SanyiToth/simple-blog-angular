@@ -19,7 +19,7 @@ export class CommentsService {
     return this.http.get<Comment[]>(CommentsService.API_URL + '?_sort=id&_order=desc&postId=' + postId);
   }
 
-  postComments(comment: NewComment): Observable<NewComment> {
+  postComment(comment: NewComment): Observable<NewComment> {
     return this.http.post<NewComment>(CommentsService.API_URL, comment);
   }
 }
