@@ -18,3 +18,5 @@
     <app-comment [comment]="comment"></app-comment>
   </div>
 </ng-template>
+
+<app-comment-form-container [postId]="postId" (response)="setNewCommentItem($event)" ></app-comment-form-container>

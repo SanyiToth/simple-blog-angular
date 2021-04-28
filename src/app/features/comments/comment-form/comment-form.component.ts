@@ -1,6 +1,7 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
-import {NewComment} from '../new-comment.interface';
+import {NewComment} from '../comment.interface';
+
 
 
 @Component({
