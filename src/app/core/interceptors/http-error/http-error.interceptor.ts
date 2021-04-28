@@ -23,7 +23,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
 
   handleError(error: HttpErrorResponse): Observable<HttpEvent<Error>> {
-    const errorMessage = 'Ooops! Something happened, try again later';
+    const errorMessage = 'Ooops! Something happened, try again later! ';
 
    /* if (error.error instanceof ProgressEvent) {
       // client-side error

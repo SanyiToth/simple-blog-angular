@@ -14,53 +14,57 @@
   </div>
 
 
-  <div *ngIf="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>{{errorMessage}}</strong>Your message has not been sent!
-    <button (click)="closeErrorAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-
   <form *ngIf="!successAlert" #contactForm="ngForm" (submit)="onSubmit(contactForm)">
+
+    <div *ngIf="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{errorMessage}}</strong>Your message has not been sent!
+      <button (click)="closeErrorAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
     <h2>We are keen to hear from You!</h2>
-    <label for="nameField">Name</label><br>
-    <input type="text" #nameField="ngModel"
-           name="nameField"
-           id="nameField"
-           required
-           autocomplete="off"
-           minlength="6"
-           [ngModel]="initialValues.name"
-           placeholder="Fill your name please!">
-    <div class="error" *ngIf="nameField.invalid && !nameField.value?.length && nameField.touched">
-      Please fill your name!
-    </div>
-    <div class="error" *ngIf="nameField.invalid  && nameField.value?.length">
-      Name should be at least 6 characters!
-    </div>
 
-
-    <div>
-      <br>
-      <label for="emailField">Email</label><br>
-      <input type="text" name="emailField" id="emailField" [ngModel]="initialValues.email" email
-             placeholder="Fill your email please!" required #emailField="ngModel">
-      <div class="error" *ngIf="emailField.invalid && !emailField.value && emailField.touched">
-        Please fill your email!
+    <div class="first-line">
+      <div class="name">
+        <label for="nameField">Name</label><br>
+        <input type="text" #nameField="ngModel"
+               name="nameField"
+               id="nameField"
+               required
+               autocomplete="off"
+               minlength="6"
+               [ngModel]="initialValues.name"
+               placeholder="Fill your name please!">
+        <div class="error" *ngIf="nameField.invalid && !nameField.value?.length && nameField.touched">
+          Please fill your name!
+        </div>
+        <div class="error" *ngIf="nameField.invalid  && nameField.value?.length">
+          Name should be at least 6 characters!
+        </div>
       </div>
-      <div class="error" *ngIf="emailField.invalid && emailField.value">
-        Please fill a valid email!
+
+      <div class="email">
+        <label for="emailField">Email</label><br>
+        <input type="text" name="emailField" id="emailField" [ngModel]="initialValues.email" email
+               placeholder="Fill your email please!" required #emailField="ngModel">
+        <div class="error" *ngIf="emailField.invalid && !emailField.value && emailField.touched">
+          Please fill your email!
+        </div>
+        <div class="error" *ngIf="emailField.invalid && emailField.value">
+          Please fill a valid email!
+        </div>
       </div>
     </div>
 
-
-    <div>
-      <br>
-      <label for="textareaField">Message</label><br>
-      <textarea id="textareaField" name="textareaField" [ngModel]="initialValues.message"
-                placeholder="You can write your message here" rows="4" cols="50" required
-                #textareaField="ngModel" minlength="100"></textarea>
+    <div class="message">
+      <div>
+        <br>
+        <label for="textareaField">Message</label><br>
+        <textarea id="textareaField" name="textareaField" [ngModel]="initialValues.message"
+                  placeholder="You can write your message here" rows="8" required
+                  #textareaField="ngModel" minlength="100"></textarea>
+      </div>
       <div class="error"
            *ngIf=" textareaField.invalid && !textareaField.value?.length
             && textareaField.touched">

@@ -60,7 +60,4 @@ export class ContactComponent implements OnInit {
     this.errorAlert = false;
   }
 
-  closeSuccessAlert():void {
-    this.successAlert = false;
-  }
 }

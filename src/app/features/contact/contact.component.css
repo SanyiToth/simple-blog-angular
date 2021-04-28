@@ -1,3 +1,18 @@
+form{
+  max-width:800px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.first-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message textarea {
+  width: 100%;
+}
 
 .header {
   padding: 10px 50px;
@@ -67,7 +82,7 @@ textarea.ng-valid.ng-touched {
 }
 
 .success-alert h1 {
-  font-size:xx-large;
+  font-size: xx-large;
 }
 
 
