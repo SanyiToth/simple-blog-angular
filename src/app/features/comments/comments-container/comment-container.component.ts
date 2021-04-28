@@ -14,15 +14,13 @@ export class CommentContainerComponent implements OnInit {
   @Input() postId: number;
   comments: Comment[];
   errorMessage = '';
-  newCommentItem: NewComment;
 
   constructor(private commentService: CommentsService) {
   }
 
 
   setNewCommentItem(newComment: NewComment): void {
-    this.newCommentItem = newComment;
-    this.comments = [this.newCommentItem, ...this.comments];
+    this.comments = [newComment, ...this.comments];
   }
 
   ngOnInit(): void {

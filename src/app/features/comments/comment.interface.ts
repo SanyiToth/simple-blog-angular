@@ -3,6 +3,7 @@ export interface Comment {
   name: string;
   email: string;
   body: string;
+  id?: number;
 }
 
 export interface NewComment extends Comment {
