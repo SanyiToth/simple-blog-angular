@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {PostsComponent} from './posts.component';
+
 import {UcfirstPipe} from 'src/app/core/pipes/ucfirst.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -12,6 +12,7 @@ import {PostDetailsComponent} from 'src/app/features/posts/post-details/post-det
 import {PostRoutingModule} from './post-routing.module';
 import {CommentsModule} from '../comments/comments.module';
 import {HeaderComponent} from '../../core/components/header/header.component';
+import {PostsComponent} from './posts-container/posts.component';
 
 
 @NgModule({

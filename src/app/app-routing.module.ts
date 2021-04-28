@@ -3,8 +3,9 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NotFoundComponentComponent} from './core/components/not-found-component/not-found-component.component';
 import {PageComponent} from './core/components/page/page.component';
-import {PostsComponent} from './features/posts/posts.component';
+
 import {ContactComponent} from './features/contact/contact.component';
+import {PostsComponent} from './features/posts/posts-container/posts.component';
 
 const routes: Routes = [
   {path: '', component: PostsComponent},

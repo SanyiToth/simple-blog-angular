@@ -3,7 +3,7 @@ h1 {
   font-weight: bolder;
 }
 
-a {
+app-header a {
   width: 100%;
   display: flex;
   justify-content: flex-end;
