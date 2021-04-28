@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Comment} from './comment.interface';
-import {NewComment} from './new-comment.interface';
+import {Comment, NewComment} from './comment.interface';
+
 
 
 @Injectable({

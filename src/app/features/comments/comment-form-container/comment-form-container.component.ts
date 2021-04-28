@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {NewComment} from '../new-comment.interface';
 import {CommentsService} from '../comments.service';
-import {CommentContainerComponent} from '../comments-container/comment-container.component';
+import {NewComment} from '../comment.interface';
 
 
 @Component({
