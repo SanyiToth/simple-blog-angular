@@ -4,7 +4,8 @@ import {ContactComponent} from './contact.component';
 import {FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {AppRoutingModule} from '../../app-routing.module';
-import {PostsModule} from '../posts/posts.module';
+import {CoreModule} from '../../core/core.module';
+
 
 
 
@@ -17,7 +18,7 @@ import {PostsModule} from '../posts/posts.module';
     CommonModule,
     MatCardModule,
     AppRoutingModule,
-    PostsModule
+    CoreModule
   ]
 })
 export class ContactModule {

@@ -1,34 +1,26 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {MatCardModule} from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
 import {AppComponent} from './app.component';
+import {MatCardModule} from '@angular/material/card';
 import {PostsModule} from './features/posts/posts.module';
 import {RouterModule} from '@angular/router';
-import {NotFoundComponentComponent} from './core/components/not-found-component/not-found-component.component';
-import {FooterComponent} from './core/components/footer/footer.component';
 import {ContactModule} from './features/contact/contact.module';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
-import {PageComponent} from './core/components/page/page.component';
-import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.interceptor';
 import {CommentsModule} from './features/comments/comments.module';
-
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.interceptor';
+import {FooterComponent} from './core/components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponentComponent,
     FooterComponent,
-    PageComponent,
-
   ],
   imports: [
     BrowserModule,
     PostsModule,
     MatCardModule,
-    MatListModule,
     AppRoutingModule,
     RouterModule,
     ContactModule,
