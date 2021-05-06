@@ -3,10 +3,8 @@ import {CommonModule} from '@angular/common';
 import {ContactComponent} from './contact.component';
 import {FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
-import {AppRoutingModule} from '../../app-routing.module';
 import {CoreModule} from '../../core/core.module';
-
-
+import { ContactRoutingModule } from './contact-routing.module';
 
 
 @NgModule({
@@ -17,8 +15,8 @@ import {CoreModule} from '../../core/core.module';
     FormsModule,
     CommonModule,
     MatCardModule,
-    AppRoutingModule,
-    CoreModule
+    CoreModule,
+    ContactRoutingModule
   ]
 })
 export class ContactModule {
