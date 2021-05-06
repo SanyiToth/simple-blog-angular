@@ -11,6 +11,7 @@ import {RouterModule} from '@angular/router';
 import {PostDetailsComponent} from 'src/app/features/posts/post-details/post-details.component';
 import {PostRoutingModule} from './post-routing.module';
 import {CommentsModule} from '../comments/comments.module';
+import {CoreModule} from '../../core/core.module';
 
 
 
@@ -33,6 +34,7 @@ import {CommentsModule} from '../comments/comments.module';
     RouterModule,
     PostRoutingModule,
     CommentsModule,
+    CoreModule
   ]
 
 })

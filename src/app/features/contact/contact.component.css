@@ -14,18 +14,11 @@ form{
   width: 100%;
 }
 
-.header {
-  padding: 10px 50px;
-  height: 80px;
-  margin: 20px auto;
-}
-
 h1 {
-  font-family: 'Roboto', sans-serif;
   font-weight: bolder;
 }
 
-.header a {
+app-header a {
   width: 100%;
   display: flex;
   justify-content: flex-end;
