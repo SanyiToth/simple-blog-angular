@@ -9,18 +9,15 @@
 </ng-template>
 
 <ng-template #noErrorTpl>
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>
-        <h1>{{post?.title}}</h1>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="header-mat-card">
+
+  <app-header>
+    <h1>{{post?.title}}</h1>
+    <div class="header-content">
       <p>Id:{{post?.id}}</p>
       <p>Author:{{post?.author}}</p>
-      <a routerLink=""><-- All posts</a>
-    </mat-card-content>
-  </mat-card>
+      <a routerLink=""><--All posts</a>
+    </div>
+  </app-header>
 
   <mat-card>
     <mat-card-content class="body-mat-card">
@@ -29,6 +26,6 @@
     </mat-card-content>
   </mat-card>
 
-  <app-comment-container  [postId]="id"></app-comment-container>
+  <app-comment-container [postId]="id"></app-comment-container>
 
 </ng-template>
