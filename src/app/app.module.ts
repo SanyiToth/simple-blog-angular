@@ -4,7 +4,6 @@ import {AppComponent} from './app.component';
 import {MatCardModule} from '@angular/material/card';
 import {PostsModule} from './features/posts/posts.module';
 import {RouterModule} from '@angular/router';
-import {ContactModule} from './features/contact/contact.module';
 import {AppRoutingModule} from './app-routing.module';
 import {CommentsModule} from './features/comments/comments.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
@@ -24,8 +23,8 @@ import {CoreModule} from './core/core.module';
     MatCardModule,
     AppRoutingModule,
     RouterModule,
-    ContactModule,
     CommentsModule,
+    CoreModule
   ],
 
   providers: [
