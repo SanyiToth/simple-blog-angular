@@ -7,8 +7,7 @@ import {PostsComponent} from './posts-container/posts.component';
 
 const routes: Routes = [
   {path: '', component: PostsComponent},
-  {
-    path: 'posts', children: [
+  {path: 'posts', children: [
       {path: ':id', component: PostDetailsComponent}
     ]
   }

@@ -6,6 +6,7 @@ import {PageComponent} from './core/components/page/page.component';
 
 
 const routes: Routes = [
+  {path: 'post', loadChildren: () => import('./features/posts/posts.module').then(m => m.PostsModule)},
   {path: 'contact', loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule)},
   {path: 'page', component: PageComponent},
   {path: '404', component: NotFoundComponentComponent},
