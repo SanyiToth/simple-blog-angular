@@ -10,6 +10,7 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpErrorInterceptor} from './core/interceptors/http-error/http-error.interceptor';
 import {FooterComponent} from './core/components/footer/footer.component';
 import {CoreModule} from './core/core.module';
+import {AuthModule} from './auth/auth.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {CoreModule} from './core/core.module';
     AppRoutingModule,
     RouterModule,
     CommentsModule,
-    CoreModule
+    CoreModule,
+    AuthModule
   ],
 
   providers: [

@@ -3,12 +3,13 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NotFoundComponentComponent} from './core/components/not-found-component/not-found-component.component';
 import {PageComponent} from './core/components/page/page.component';
-
+import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
-  {path: '', loadChildren: () => import('./features/posts/posts.module').then(m => m.PostsModule)},
+  {path: 'posts', loadChildren: () => import('./features/posts/posts.module').then(m => m.PostsModule)},
   {path: 'contact', loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule)},
   {path: 'page', component: PageComponent},
+  {path: 'admin', canLoad: [AuthGuard], loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule)},
   {path: '404', component: NotFoundComponentComponent},
   {path: '**', redirectTo: '404'}
 ];
