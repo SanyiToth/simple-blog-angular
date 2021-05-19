@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../auth/auth.service';
 import {Router} from '@angular/router';
 import {ErrorMessage} from '@angular/compiler-cli/ngcc/src/execution/cluster/api';
@@ -37,7 +37,15 @@ export class LoginComponent implements OnInit {
           console.log(this.errorMessage);
           this.loginForm.reset();
         }
-      )
-    ;
+      );
   }
+
+  get email(): AbstractControl | null {
+    return this.loginForm.get('email');
+  }
+
+  get password(): AbstractControl | null {
+    return this.loginForm.get('password');
+  }
+
 }

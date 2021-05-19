@@ -8,8 +8,23 @@
   <div>
     <h2>Login as an administrator</h2> <br>
     <form [formGroup]="loginForm" (submit)="onSubmit()">
-      <input type="email" placeholder="email" formControlName="email"><br><br>
-      <input type="password" placeholder="password" formControlName="password"><br><br>
+      <div>
+        <input type="email" placeholder="email" formControlName="email">
+        <div class="error" *ngIf="email.invalid && !email.value && email.touched">
+          Please fill your email!
+        </div>
+        <div class="error" *ngIf="email.invalid && email.value">
+          Please fill a valid email!
+        </div>
+      </div>
+      <br>
+      <div>
+        <input type="password" placeholder="password" formControlName="password">
+        <div class="error" *ngIf="password.invalid && !password.value && password.touched">
+          Please give a correct password!
+        </div>
+      </div>
+      <br>
       <button type="submit" [disabled]="loginForm.invalid">Login</button>
     </form>
   </div>
