@@ -26,7 +26,7 @@ import {AuthModule} from './auth/auth.module';
     RouterModule,
     CommentsModule,
     CoreModule,
-    AuthModule
+    AuthModule,
   ],
 
   providers: [

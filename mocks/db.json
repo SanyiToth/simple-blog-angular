@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$CmQV1kOBKDNCSW1rqN0e6ebW1KUk8bTYnUAkr1csLjDGIDPcF0bcy",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "userId": 1,
