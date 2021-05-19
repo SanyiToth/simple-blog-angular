@@ -1,5 +1,16 @@
-<form [formGroup]="loginForm" (submit)="onSubmit()">
-  <input type="email" placeholder="email" formControlName="email"><br>
-  <input type="password" placeholder="password" formControlName="password"><br>
-  <button type="submit" [disabled]="loginForm.invalid">Login</button>
-</form>
+<app-header>
+  <h1>Blog Project</h1>
+  <h3>This is the best app for people with apps.</h3>
+</app-header>
+
+
+<mat-card>
+  <div>
+    <h2>Login as an administrator</h2> <br>
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+      <input type="email" placeholder="email" formControlName="email"><br><br>
+      <input type="password" placeholder="password" formControlName="password"><br><br>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+</mat-card>

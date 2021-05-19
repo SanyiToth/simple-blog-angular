@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../auth/auth.service';
 import {Router} from '@angular/router';
+import {ErrorMessage} from '@angular/compiler-cli/ngcc/src/execution/cluster/api';
 
 @Component({
   selector: 'app-login',
@@ -18,20 +19,22 @@ export class LoginComponent implements OnInit {
     email: [null, [Validators.required, Validators.email]],
     password: [null, [Validators.required]]
   });
-  errorMessage = '';
+  errorMessage: ErrorMessage;
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
     console.log(this.loginForm.value);
-    this.authService.login(this.loginForm.value)
+    this.authService
+      .login(this.loginForm.value)
       .subscribe(resp => {
           console.log('resp', resp);
           this.router.navigate(['/admin']);
           this.loginForm.reset();
-        }, error => {
+        }, (error: ErrorMessage) => {
           this.errorMessage = error;
+          console.log(this.errorMessage);
           this.loginForm.reset();
         }
       )

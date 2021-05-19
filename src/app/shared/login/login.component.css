@@ -1,0 +1,10 @@
+h1 {
+  font-weight: bolder;
+}
+
+mat-card {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  margin-bottom: 10px;
+}
