@@ -10,7 +10,8 @@ export class FooterComponent implements OnInit {
     {title: 'Blog', root: ''},
     {title: 'Terms & Conditions', root: '/page'},
     {title: 'About Us', root: '/page'},
-    {title: 'Contact', root: '/contact'}
+    {title: 'Contact', root: '/contact'},
+    {title: 'Admin', root: '/admin'}
   ];
 
   constructor() {
