@@ -32,6 +32,7 @@ export class AuthService {
   }
 
   logout(): void {
+    localStorage.setItem('jwt', JSON.stringify(''));
     this.jwtSubject.next(null);
   }
 

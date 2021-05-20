@@ -1,7 +1,23 @@
 <app-header>
   <h1>Blog Project</h1>
   <h3>This is the best app for people with apps.</h3>
+
 </app-header>
+
+
 <mat-card>
-  <p>dashboard works!</p>
+  <div *ngIf="!loggedOut">
+    <p>dashboard works!</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+
+  <div *ngIf="loggedOut">
+    <h1>You logged out!</h1>
+  </div>
+
 </mat-card>
+
+
+
+
+

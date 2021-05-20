@@ -14,7 +14,6 @@
 
 
   <form *ngIf="!successAlert" #contactForm="ngForm" (submit)="onSubmit(contactForm)">
-
     <div *ngIf="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
       <strong>{{errorMessage}}</strong>Your message has not been sent!
       <button (click)="closeErrorAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
