@@ -3,17 +3,18 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {AccessToken, LoginCredential, User} from './auth.interface';
 import {HttpClient} from '@angular/common/http';
 import {tap} from 'rxjs/operators';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-
-  private static API_URL = 'http://localhost:3000';
   private static PATH = '/login';
 
   constructor(private http: HttpClient) {
+    const jwtToken = JSON.parse(localStorage.getItem('jwt') as string) as AccessToken || undefined;
+    this.jwtSubject = new BehaviorSubject<AccessToken>(jwtToken);
   }
 
   jwtSubject: BehaviorSubject<AccessToken> = new BehaviorSubject<AccessToken>(null);
@@ -21,7 +22,7 @@ export class AuthService {
 
   login(credentials: LoginCredential): Observable<AccessToken> {
     return this.http
-      .post<AccessToken>(AuthService.API_URL + AuthService.PATH, credentials)
+      .post<AccessToken>(environment.API_URL + AuthService.PATH, credentials)
       .pipe(
         tap(token => {
           localStorage.setItem('jwt', JSON.stringify(token));
