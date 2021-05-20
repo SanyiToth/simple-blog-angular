@@ -7,6 +7,9 @@ import {MatCardModule} from '@angular/material/card';
 import { TabNavigationComponent } from './tab-navigation/tab-navigation.component';
 import {MatListModule} from '@angular/material/list';
 import { PostsDashboardComponent } from './posts-dashboard/posts-dashboard.component';
+import { CommentsDashboardComponent } from './comments-dashboard/comments-dashboard.component';
+import { PageDashboardComponent } from './page-dashboard/page-dashboard.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -15,14 +18,16 @@ import { PostsDashboardComponent } from './posts-dashboard/posts-dashboard.compo
     DashboardComponent,
     TabNavigationComponent,
     PostsDashboardComponent,
-
+    CommentsDashboardComponent,
+    PageDashboardComponent,
   ],
   imports: [
     SharedModule,
     CommonModule,
     DashboardRoutingModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule
   ]
 })
 export class DashboardModule {

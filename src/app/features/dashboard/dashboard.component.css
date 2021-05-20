@@ -10,20 +10,8 @@ a {
 }
 
 mat-card {
-
   height: 70vh;
   margin-bottom: 10px;
 }
 
-.dashboard {
-  width: 100%;
-  display: flex;
-}
 
-.dashboard-content {
-  width: 80%;
-}
-
-app-tab-navigation {
-  width: 20%;
-}

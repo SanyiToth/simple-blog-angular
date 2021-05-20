@@ -7,9 +7,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TabNavigationComponent implements OnInit {
   routes = [
-    {title: 'posts', root: ''},
-    {title: 'comments', root: ''},
-    {title: 'page', root: ''}
+    {title: 'posts', route: '/admin/posts'},
+    {title: 'comments', route: '/admin/comments'},
+    {title: 'page', route: '/admin/page'}
   ];
 
   constructor() {
