@@ -1,14 +1,14 @@
 <app-header>
-  <h1>Blog Project</h1>
-  <h3>This is the best app for people with apps.</h3>
-
+  <h1>Admin Dashboard</h1>
+  <a (click)="logout()"><strong>Logout</strong></a>
 </app-header>
 
 
 <mat-card>
-  <div *ngIf="!loggedOut">
-    <p>dashboard works!</p>
-    <button (click)="logout()">Logout</button>
+  <div class="dashboard" *ngIf="!loggedOut">
+    <app-tab-navigation class="dashboard-navigation"></app-tab-navigation>
+    <div class="dashboard-content">
+    </div>
   </div>
 
   <div *ngIf="loggedOut">
@@ -16,8 +16,5 @@
   </div>
 
 </mat-card>
-
-
-
 
 

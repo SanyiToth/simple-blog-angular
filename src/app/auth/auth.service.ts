@@ -12,6 +12,10 @@ export class AuthService {
 
   private static PATH = '/login';
 
+  public get currentJwtValue(): AccessToken {
+    return this.jwtSubject.value;
+  }
+
   constructor(private http: HttpClient) {
     const jwtToken = JSON.parse(localStorage.getItem('jwt') as string) as AccessToken || undefined;
     this.jwtSubject = new BehaviorSubject<AccessToken>(jwtToken);
@@ -38,6 +42,7 @@ export class AuthService {
 
 
   isLoggedIn(): boolean {
+    console.log('this.currentJwtValue', this.currentJwtValue);
     return !!this.jwtSubject.value;
   }
 

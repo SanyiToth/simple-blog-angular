@@ -2,7 +2,28 @@ h1 {
   font-weight: bolder;
 }
 
+a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
 mat-card {
+
   height: 70vh;
   margin-bottom: 10px;
+}
+
+.dashboard {
+  width: 100%;
+  display: flex;
+}
+
+.dashboard-content {
+  width: 80%;
+}
+
+app-tab-navigation {
+  width: 20%;
 }
