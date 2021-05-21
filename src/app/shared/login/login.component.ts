@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
     password: [null, [Validators.required]]
   });
   errorMessage: ErrorMessage;
+  successAlert = false;
+  errorAlert = false;
 
   ngOnInit(): void {
   }
@@ -30,10 +32,14 @@ export class LoginComponent implements OnInit {
       .login(this.loginForm.value)
       .subscribe(resp => {
           console.log('resp', resp);
-          this.router.navigate(['/admin']);
           this.loginForm.reset();
+          this.successAlert = true;
+          setTimeout(() => {
+            this.router.navigate(['/admin']);
+          }, 2000);
         }, (error: ErrorMessage) => {
           this.errorMessage = error;
+          this.errorAlert = true;
           console.log(this.errorMessage);
           this.loginForm.reset();
         }
@@ -48,4 +54,11 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('password');
   }
 
+  closeSuccessAlert(): void {
+    this.successAlert = false;
+  }
+
+  closeErrorAlert(): void {
+    this.errorAlert = false;
+  }
 }

@@ -5,9 +5,29 @@
 
 
 <mat-card>
-  <div>
-    <h2>Login as an administrator</h2> <br>
+  <div class="login-content">
+
+    <div *ngIf="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success!</strong> You logged in! We will redirect you to the admin page!
+      <button (click)="closeSuccessAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+
+    <div *ngIf="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{errorMessage}}</strong>
+      <button (click)="closeErrorAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <h2>Login</h2> <br>
+
+
     <form [formGroup]="loginForm" (submit)="onSubmit()">
+
+
       <div>
         <input type="email" placeholder="email" formControlName="email">
         <div class="error" *ngIf="email.invalid && !email.value && email.touched">
