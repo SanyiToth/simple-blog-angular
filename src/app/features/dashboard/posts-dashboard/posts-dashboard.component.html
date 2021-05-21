@@ -1,8 +1,9 @@
+<mat-card *ngFor="let post of posts">
+  <img mat-card-md-image [src]="post.postImg" alt="random">
 
-<div *ngFor="let post of posts">
- <!-- <img mat-card-image [src]="data.postImg" alt="random">-->
-  <mat-card>
-    <h2 [innerHTML]="post.title"></h2>
-    <p [innerHTML]="post.body"></p>
-  </mat-card>
-</div>
+   <mat-card-content>
+     <h2 [innerHTML]="post.title"></h2>
+     <p [innerHTML]="post.body"></p>
+   </mat-card-content>
+</mat-card>
+
