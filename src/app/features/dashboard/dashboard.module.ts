@@ -10,7 +10,7 @@ import { CommentsDashboardComponent } from './comments-dashboard/comments-dashbo
 import { PageDashboardComponent } from './page-dashboard/page-dashboard.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
-
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 
 
 @NgModule({
@@ -27,7 +27,8 @@ import {MatIconModule} from '@angular/material/icon';
     DashboardRoutingModule,
     MatCardModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    BackButtonDisableModule.forRoot()
   ]
 })
 export class DashboardModule {
