@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Post} from '../../posts/post.interface';
-import {DashboardService} from '../dashboard.service';
+
 
 @Component({
   selector: 'app-posts-dashboard',
@@ -8,21 +8,18 @@ import {DashboardService} from '../dashboard.service';
   styleUrls: ['./posts-dashboard.component.css']
 })
 export class PostsDashboardComponent implements OnInit {
-  posts: Post [];
-  errorMessage = '';
 
-  constructor(private dashboardService: DashboardService) {
+  @Input() posts: Post[];
+  @Output() newDeleteEvent = new EventEmitter<number>();
+
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.dashboardService.getPosts().subscribe(posts => {
-      this.posts = posts;
-    }, errorMsg => {
-      this.errorMessage = errorMsg;
-    });
+
   }
 
   removePostItem(id): void {
-
+    this.newDeleteEvent.emit(id);
   }
 }
