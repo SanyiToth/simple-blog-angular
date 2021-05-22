@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {PostsService} from '../../posts/posts.service';
 import {Post} from '../../posts/post.interface';
 import {DashboardService} from '../dashboard.service';
 
@@ -23,4 +22,7 @@ export class PostsDashboardComponent implements OnInit {
     });
   }
 
+  removePostItem(id): void {
+
+  }
 }
