@@ -3,7 +3,7 @@ mat-card {
   margin: 10px auto;
   width: 80%;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -12,5 +12,10 @@ mat-card-content {
 }
 
 img {
+padding: 10px;
+}
+
+.post-dashboard-item-buttons{
+  display: flex;
 
 }

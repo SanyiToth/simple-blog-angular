@@ -5,11 +5,11 @@ import {SharedModule} from '../../shared/shared.module';
 import {DashboardComponent} from './dashboard.component';
 import {MatCardModule} from '@angular/material/card';
 import { TabNavigationComponent } from './tab-navigation/tab-navigation.component';
-import {MatListModule} from '@angular/material/list';
 import { PostsDashboardComponent } from './posts-dashboard/posts-dashboard.component';
 import { CommentsDashboardComponent } from './comments-dashboard/comments-dashboard.component';
 import { PageDashboardComponent } from './page-dashboard/page-dashboard.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -26,8 +26,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     CommonModule,
     DashboardRoutingModule,
     MatCardModule,
-    MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule
   ]
 })
 export class DashboardModule {
