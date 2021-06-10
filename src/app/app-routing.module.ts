@@ -7,7 +7,6 @@ import {AuthGuard} from './auth/auth.guard';
 import {LoginComponent} from './shared/login/login.component';
 
 const routes: Routes = [
-  {path: 'posts', loadChildren: () => import('./features/posts/posts.module').then(m => m.PostsModule)},
   {path: 'contact', loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule)},
   {path: 'page', component: PageComponent},
   {path: 'login', component: LoginComponent},
