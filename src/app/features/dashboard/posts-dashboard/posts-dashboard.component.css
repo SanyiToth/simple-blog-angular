@@ -1,0 +1,21 @@
+mat-card {
+  background: lightgrey;
+  margin: 10px auto;
+  width: 80%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+mat-card-content {
+  width: 80%;
+}
+
+img {
+padding: 10px;
+}
+
+.post-dashboard-item-buttons{
+  display: flex;
+
+}

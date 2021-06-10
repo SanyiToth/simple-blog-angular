@@ -1,20 +1,21 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HeaderComponent} from './components/header/header.component';
 import {MatCardModule} from '@angular/material/card';
 import {NotFoundComponentComponent} from './components/not-found-component/not-found-component.component';
+import {SharedModule} from '../shared/shared.module';
+import {PageComponent} from './components/page/page.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    NotFoundComponentComponent
+    NotFoundComponentComponent,
+    PageComponent
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule
   ],
   exports: [
-    HeaderComponent,
     NotFoundComponentComponent
   ]
 })

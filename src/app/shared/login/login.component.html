@@ -1,0 +1,51 @@
+<app-header>
+  <h1>Blog Project</h1>
+  <h3>This is the best app for people with apps.</h3>
+</app-header>
+
+
+<mat-card>
+  <div class="login-content">
+
+    <div *ngIf="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success!</strong> You logged in! We will redirect you to the admin page!
+      <button (click)="closeSuccessAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+
+    <div *ngIf="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{errorMessage}}</strong>
+      <button (click)="closeErrorAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <h2>Login</h2> <br>
+
+
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+
+
+      <div>
+        <input type="email" placeholder="email" formControlName="email">
+        <div class="error" *ngIf="email.invalid && !email.value && email.touched">
+          Please fill your email!
+        </div>
+        <div class="error" *ngIf="email.invalid && email.value">
+          Please fill a valid email!
+        </div>
+      </div>
+      <br>
+      <div>
+        <input type="password" placeholder="password" formControlName="password">
+        <div class="error" *ngIf="password.invalid && !password.value && password.touched">
+          Please give a correct password!
+        </div>
+      </div>
+      <br>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+</mat-card>

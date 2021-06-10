@@ -1,0 +1,27 @@
+<app-header>
+  <h1>Admin Dashboard</h1>
+  <a (click)="logout()"><strong>Logout</strong></a>
+</app-header>
+
+<mat-card class="dashboard-content">
+  <div class="dashboard" *ngIf="!loggedOut">
+    <mat-tab-group headerPosition="above" mat-align-tabs="center">
+      <mat-tab label="Posts">
+        <app-posts-dashboard [posts]="posts" (newDeleteEvent)="removeTodo($event)"></app-posts-dashboard>
+      </mat-tab>
+      <mat-tab label="Comments">
+        <app-comments-dashboard></app-comments-dashboard>
+      </mat-tab>
+      <mat-tab label="Page">
+        <app-page-dashboard></app-page-dashboard>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div *ngIf="loggedOut" class="logged-out">
+    <h1>You logged out!</h1>
+  </div>
+
+</mat-card>
+
+

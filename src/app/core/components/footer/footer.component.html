@@ -2,7 +2,7 @@
 
 <mat-card>
   <mat-card-content *ngFor="let link of footerLinks">
-    <a [routerLink]="link.root" routerLinkActive="active-link"
+    <a [routerLink]="link.route" routerLinkActive="active-link"
        [routerLinkActiveOptions]="{exact:true}">{{link.title}}</a>
   </mat-card-content>
 </mat-card>

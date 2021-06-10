@@ -1,0 +1,19 @@
+h1 {
+  font-weight: bolder;
+}
+
+a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+mat-card {
+  min-height: 70vh;
+  margin-bottom: 10px;
+/*  display: flex;
+  justify-content: center;*/
+}
+
+

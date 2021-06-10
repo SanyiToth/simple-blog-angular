@@ -1,0 +1,17 @@
+<mat-card *ngFor="let post of posts">
+  <img mat-card-lg-image [src]="post?.postImg" alt="random">
+  <mat-card-content>
+    <h2 [innerHTML]="post?.title"></h2>
+    <p [innerHTML]="post?.body"></p>
+  </mat-card-content>
+  <div class="post-dashboard-item-buttons">
+    <mat-icon aria-hidden="false" aria-label="Delete icon"
+              style="cursor: pointer"  (click)="removePostItem(post?.id)">delete
+    </mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Delete icon"
+              style="cursor: pointer">edit
+    </mat-icon>
+  </div>
+
+</mat-card>
+

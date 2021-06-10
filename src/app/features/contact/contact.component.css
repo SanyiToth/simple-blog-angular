@@ -28,7 +28,7 @@ app-header a {
 
 .mat-card-form {
   margin-bottom: 20px;
-  height: 100vh;
+  height: 70vh;
 }
 
 input.ng-invalid.ng-touched {

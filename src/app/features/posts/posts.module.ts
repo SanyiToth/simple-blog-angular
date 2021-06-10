@@ -11,7 +11,7 @@ import {RouterModule} from '@angular/router';
 import {PostDetailsComponent} from 'src/app/features/posts/post-details/post-details.component';
 import {PostRoutingModule} from './post-routing.module';
 import {CommentsModule} from '../comments/comments.module';
-import {CoreModule} from '../../core/core.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 
@@ -34,7 +34,7 @@ import {CoreModule} from '../../core/core.module';
     RouterModule,
     PostRoutingModule,
     CommentsModule,
-    CoreModule
+    SharedModule
   ]
 
 })
